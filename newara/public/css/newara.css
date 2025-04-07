@@ -1,4 +1,4 @@
-:root {
+[data-theme="light"] {
 	--bg-color:  #e5e8eb;
 	--btn-primary: #714B67;
 	--btn-secondary: #017E8480;
@@ -9,6 +9,18 @@
 	--btn-default-hover-bg: white;
 	--sidebar-select-color: #017E8420;
 	--checkbox-gradient: linear-gradient(180deg, var(--btn-primary) -124.51%, var(--btn-primary) 100%);
+	--text-base: 14px;
+}
+
+[data-theme="dark"] {
+	--bg-color: var(--gray-900);
+	--btn-primary: #714B67;
+	--btn-secondary: #03dac6;
+	--navbar-bg: #714B67;
+	--text-btn-color: white;
+	--sidebar-select-color: #017E8420;
+	--checkbox-gradient: linear-gradient(180deg, var(--btn-primary) -124.51%, var(--btn-primary) 100%);
+	--text-color: white;
 	--text-base: 14px;
 }
 
@@ -84,7 +96,7 @@ body, .page-container {
 	background-color: var(--bg-color) !important;
 }
 
-.page-head { 
+[data-theme="light"] .page-head { 
 	background-color: white !important;
 }
 
@@ -94,7 +106,7 @@ body, .page-container {
 	stroke:  #017E8480 !important;
 }
 
-.page-content .layout-main-section{
+[data-theme="light"] .page-content .layout-main-section{
         background-color: white;
 }
 
@@ -145,9 +157,13 @@ a.onboard-spotlight .link-content:hover {
 	box-shadow: 0 0 0 1px rgba(124, 124, 124, 0.25) !important;
 }
 
-.level.list-row-head, .level.list-row-head .level-item {
+[data-theme="light"] .level.list-row-head, .level.list-row-head .level-item {
 	font-weight:bold;
 	background-color: var(--gray-300);
+}
+[data-theme="dark"] .level.list-row-head, .level.list-row-head .level-item {
+	font-weight:bold;
+	color: white !important;
 }
 .list-row-container .list-row:hover{
 	background-color: var(--sidebar-select-color);
@@ -219,9 +235,15 @@ input[type="checkbox"]:checked {
 	border-radius: 0.25rem !important;
 }
 
-.btn.btn-primary{
+[data-theme="light"] .btn.btn-primary{
 	color: var(--text-btn-color);
 	border: solid 2px #714b67 !important;
+}
+
+[data-theme="dark"] .btn.btn-primary{
+	color: var(--text-btn-color);
+	border: solid 2px #714b67 !important;
+	background-color: #714b67;
 }
 
 .btn.btn-primary:hover {
@@ -261,7 +283,7 @@ input[type="checkbox"]:checked {
 }
 
 .btn.btn-default {
-	background: var(--navbar-bg) !important;
+	background: var(--btn-default-hover-bg) !important;
     border: solid 1px var(--btn-secondary) !important;
     color: var(--text-color);
 }
